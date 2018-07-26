@@ -33,7 +33,4 @@ class Sistema{
 LembreteSimples -- Sistema
 LembreteTarefa -- Sistema
 
-
-
-
 @enduml

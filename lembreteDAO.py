@@ -29,3 +29,10 @@ class LembreteDAO:
                 lembretes[1].append(["Tag:" + str(tupla['tag']),  'Descrição: ' + str(tupla['descricao']), "Deadline: " + str(tupla['deadline']), 'ID: ' + str(tupla['id'])])
         cursor.close()
         return lembretes
+
+    def arquivarLembrete(self, id):
+        cursor = self.conexao.cursor()
+        cursor.execute("update sistemadelembretes set arquivado=True where id=(%s)",
+                       (id,))
+        cursor.commit()
+        cursor.close()

@@ -3,6 +3,7 @@ class Lembrete:
         self.__descricao = descricao
         self.__tag = tag
         self.__id = id
+        self.__arquivado = False
 
     def getDescricao(self):
         return self.__descricao
@@ -12,6 +13,9 @@ class Lembrete:
 
     def getId(self):
         return self.__id
+
+    def getArquivado(self):
+        return self.__arquivado
 
     def setDescricao(self, novaDescricao):
         self.__descricao = novaDescricao

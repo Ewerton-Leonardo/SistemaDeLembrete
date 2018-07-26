@@ -1,0 +1,45 @@
+@startuml
+
+abstract class Lembrete{
+    string descricao;
+    string tag;
+    string emailUser;
+
+
+    getDescricao();
+    getTag();
+    setDescricao();
+}
+
+class LembreteAdvanced extends Lembrete{
+    string deadline;
+
+    getDeadline();
+    setDeadline();
+}
+
+class Usuario{
+    string nome;
+    string email;
+    string senha;
+
+    string getNome();
+    string getEmail();
+    setNome();
+    setSenha();
+}
+
+class Sistema{
+    string visualizarDashboard();
+    void criarLembrete();
+    void criarLembreteAdvanced();
+    void arquivarLembrete();
+    string verLembretesArquivado();
+    string buscarLembrete();
+    }
+Lembrete -- Sistema
+Usuario -- Sistema
+
+
+
+@enduml

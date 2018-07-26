@@ -3,7 +3,7 @@
 abstract class Lembrete{
     string descricao;
     string tag;
-    string emailUser;
+    int id;
 
 
     getDescricao();
@@ -11,34 +11,28 @@ abstract class Lembrete{
     setDescricao();
 }
 
-class LembreteAdvanced extends Lembrete{
+class LembreteSimples extends Lembrete{
+}
+
+class LembreteTarefa extends Lembrete{
     string deadline;
 
     getDeadline();
     setDeadline();
 }
 
-class Usuario{
-    string nome;
-    string email;
-    string senha;
-
-    string getNome();
-    string getEmail();
-    setNome();
-    setSenha();
-}
-
 class Sistema{
     string visualizarDashboard();
     void criarLembrete();
-    void criarLembreteAdvanced();
-    void arquivarLembrete();
-    string verLembretesArquivado();
-    string buscarLembrete();
+    void criarLembreteTarefa();
+    void arquivarLembrete(id);
+    string verLembretesArquivados();
+    string buscarLembrete(id);
     }
-Lembrete -- Sistema
-Usuario -- Sistema
+
+LembreteSimples -- Sistema
+LembreteTarefa -- Sistema
+
 
 
 

@@ -1,19 +1,21 @@
-from usuario import Usuario
-from lembrete import Lembrete, LembreteTarefa
+from lembrete import LembreteSimples, LembreteTarefa
 
 class Sistema:
     def __init__(self):
         pass
 
+    #Visualiza todos os post-its NAO arquivados
     def visualizarDashboard(self, usuario):
         pass
 
-    def criarLembrete(self, descricao, tag, emailUser):
-        lembrete = Lembrete(descricao, tag, emailUser, id)
-        return lembrete
+    def criarLembrete(self, descricao, tag):
+        lembreteSimples = LembreteSimples(descricao, tag, id)
+        return lembreteSimples
 
-    def criarLembreteTarefa(self, descricao, tag, emailUser, deadline):
-        lembreteTarefa = LembreteTarefa(descricao, tag, emailUser, deadline)
+    def criarLembreteTarefa(self, descricao, tag, deadline):
+        lembreteTarefa = LembreteTarefa(descricao, tag, deadline, id)
         return lembreteTarefa
 
     def arquivarLembrete(self, id):
+        pass
+

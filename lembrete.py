@@ -1,8 +1,7 @@
 class Lembrete:
-    def __init__(self, descricao, tag, emailUser, id):
+    def __init__(self, descricao, tag, id):
         self.__descricao = descricao
         self.__tag = tag
-        self.__emailUser = emailUser
         self.__id = id
 
     def getDescricao(self):
@@ -11,15 +10,19 @@ class Lembrete:
     def getTag(self):
         return self.__tag
 
-    def getEmailUser(self):
-        return self.__emailUser
+    def getId(self):
+        return self.__id
 
     def setDescricao(self, novaDescricao):
         self.__descricao = novaDescricao
 
+class LembreteSimples(Lembrete):
+    def __init__(self, descricao, tag, id):
+        Lembrete.__init__(self, descricao, tag, id)
+
 class LembreteTarefa(Lembrete):
-    def __init__(self, descricao, tag, emailUser, deadline):
-        Lembrete.__init__(self, descricao, tag, emailUser, id)
+    def __init__(self, descricao, tag, deadline, id):
+        Lembrete.__init__(self, descricao, tag, id)
         self.__deadline = deadline
 
     def getDeadline(self):

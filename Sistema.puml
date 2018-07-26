@@ -4,6 +4,7 @@ abstract class Lembrete{
     string descricao;
     string tag;
     int id;
+    bool arquivado;
 
 
     getDescricao();

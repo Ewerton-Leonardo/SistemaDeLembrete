@@ -20,5 +20,5 @@ class Sistema:
         self.lembreteDAO.inserirLembreteTarefa(lembreteTarefa)
 
     def arquivarLembrete(self, id):
-
+        pass
 
